@@ -59,6 +59,8 @@
 	        
 				<li><a href="/随笔/">随笔</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -117,6 +119,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -134,12 +138,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -183,11 +189,7 @@
 <blockquote>
 <p>3.2安装beautifulsoup4<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install beautifulsoup4</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="4-使用一个一般爬虫模板"><a href="#4-使用一个一般爬虫模板" class="headerlink" title="4.使用一个一般爬虫模板"></a>4.使用一个一般爬虫模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import traceback</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import bs4</span><br><span class="line"></span><br><span class="line"><span class="comment">#此方法根据url输出html</span></span><br><span class="line">def getHTMLText(url):</span><br><span class="line">    try:</span><br><span class="line">        r = requests.get(url,timeout=30);</span><br><span class="line">        r.raise_for_status() <span class="comment">#如果有异常（状态码不是200）此处崩出</span></span><br><span class="line">        r.encoding = <span class="string">'utf-8'</span> <span class="comment">#根据实际网站编码设置</span></span><br><span class="line">        <span class="built_in">return</span> r.text</span><br><span class="line">    except Exception as e:</span><br><span class="line">        <span class="comment">#traceback.print_exc() #异常后释放开查看具体异常</span></span><br><span class="line">        <span class="built_in">return</span> <span class="string">"发生异常"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#此处负责HTML解析，提取信息到List，为核心思想方法</span></span><br><span class="line">def fillTestList(testList ,html):</span><br><span class="line">    soup = BeautifulSoup(html,<span class="string">"html.parser"</span>)</span><br><span class="line">    soup.prettify()</span><br><span class="line">    <span class="built_in">print</span>(soup)</span><br><span class="line">    aa = soup.find_all(<span class="string">'ul'</span>,attrs=&#123;<span class="string">"class"</span>:<span class="string">"nav-list"</span>&#125;)</span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> soup.find_all(<span class="string">'ul'</span>,attrs=&#123;<span class="string">"class"</span>:<span class="string">"nav-list"</span>&#125;):</span><br><span class="line">        <span class="built_in">print</span>(tr)</span><br><span class="line"></span><br><span class="line"><span class="comment">#此处负责打印输出List处理(num为控制行数，有时候太多了不能全部打印)</span></span><br><span class="line">def printTestList(testList,num):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    testList = []</span><br><span class="line">    url = <span class="string">"https://www.xiaomiyoupin.com/"</span></span><br><span class="line">    html = getHTMLText(url)</span><br><span class="line">    fillTestList(testList,html)</span><br><span class="line">    printTestList(testList,20)</span><br></pre></td></tr></table></figure>
-<h1 id="调试过程中发现，太天真了网页是js动态生成的"><a href="#调试过程中发现，太天真了网页是js动态生成的" class="headerlink" title="调试过程中发现，太天真了网页是js动态生成的(-_-)"></a>调试过程中发现，太天真了网页是js动态生成的(-_-)</h1><h2 id="下面是验证一下requests读取的内容"><a href="#下面是验证一下requests读取的内容" class="headerlink" title="下面是验证一下requests读取的内容"></a>下面是验证一下requests读取的内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from bs4 import BeautifulSoup</span><br><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line">&gt;&gt;&gt; url = &quot;https://www.xiaomiyoupin.com/&quot;</span><br><span class="line">&gt;&gt;&gt; r=requests.get(url)</span><br><span class="line">&gt;&gt;&gt; r.encoding</span><br><span class="line">&apos;ISO-8859-1&apos;</span><br><span class="line">&gt;&gt;&gt; r.encoding = &apos;utf-8&apos;</span><br><span class="line">&gt;&gt;&gt; soup=BeautifulSoup(r.text,&apos;html.parser&apos;)</span><br><span class="line">&gt;&gt;&gt; soup.find_all(&quot;ul&quot;)</span><br><span class="line">[]</span><br><span class="line">&gt;&gt;&gt; soup.prettify()</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/04/14/5cb357fba14a4.png" alt></p>
-<h2 id="居然还提醒了！！！"><a href="#居然还提醒了！！！" class="headerlink" title="居然还提醒了！！！"></a>居然还提醒了！！！</h2><h1 id="看来只能上selenium-还不清楚树莓派能不能用，不能用就换网站了"><a href="#看来只能上selenium-还不清楚树莓派能不能用，不能用就换网站了" class="headerlink" title="看来只能上selenium(还不清楚树莓派能不能用，不能用就换网站了)"></a>看来只能上selenium(还不清楚树莓派能不能用，不能用就换网站了)</h1><h1 id="下一次再接着玩"><a href="#下一次再接着玩" class="headerlink" title="下一次再接着玩"></a>下一次再接着玩</h1><p>不过看这个可能之前成功过，不过现在应该是不一样了（<a href="https://blog.csdn.net/weixin_39416561/article/details/85201240" target="_blank" rel="noopener">python 爬虫 爬取 小米有品 全网 商品数据</a>）</p>
-
+        
       
 
       
