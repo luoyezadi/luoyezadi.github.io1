@@ -162,6 +162,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-树莓派到手配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/17/树莓派到手配置/">树莓派到手配置</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/17/树莓派到手配置/" class="archive-article-date">
+  	<time datetime="2019-04-17T14:17:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-WiFi-网络配置"><a href="#1-WiFi-网络配置" class="headerlink" title="1.WiFi 网络配置"></a>1.WiFi 网络配置</h1><p>添加文件/boot/wpa_supplicant.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;WiFi-A&quot;</span><br><span class="line">psk=&quot;12345678&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">priority=1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;WiFi-B&quot;</span><br><span class="line">psk=&quot;12345678&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">priority=2</span><br><span class="line">scan_ssid=1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>说明以及不同安全性的 WiFi 配置示例：</p>
+<p>#ssid:网络的ssid</p>
+<p>#psk:密码</p>
+<p>#priority:连接优先级，数字越大优先级越高（不可以是负数）</p>
+<p>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
+<p>如果你的 WiFi 没有密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=NONE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你的 WiFi 使用WEP加密<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=NONE</span><br><span class="line">wep_key0=&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你的 WiFi 使用WPA/WPA2加密<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">psk=&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-开启-SSH-服务"><a href="#2-开启-SSH-服务" class="headerlink" title="2.开启 SSH 服务"></a>2.开启 SSH 服务</h1><h2 id="boot-分区新建一个文件，空白的即可，文件命名为-ssh"><a href="#boot-分区新建一个文件，空白的即可，文件命名为-ssh" class="headerlink" title="boot 分区新建一个文件，空白的即可，文件命名为 ssh"></a>boot 分区新建一个文件，空白的即可，文件命名为 ssh</h2><p>转载<a href="http://shumeipai.nxez.com/2017/09/13/raspberry-pi-network-configuration-before-boot.html" target="_blank" rel="noopener">http://shumeipai.nxez.com/2017/09/13/raspberry-pi-network-configuration-before-boot.html</a></p>
+<h1 id="3-花生壳"><a href="#3-花生壳" class="headerlink" title="3.花生壳"></a>3.花生壳</h1><p>参照【花生壳 3.0 for 树莓派 安装使用攻略】<a href="http://service.oray.com/question/2680.html" target="_blank" rel="noopener">http://service.oray.com/question/2680.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/17/树莓派到手配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Hexo添加音乐-视频" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,7 +248,7 @@
 
         
         <a href="/2019/04/14/Hexo添加音乐-视频/" class="archive-article-date">
-  	<time datetime="2019-04-14T18:23:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
+  	<time datetime="2019-04-14T18:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
 </a>
         
       </header>
@@ -195,7 +268,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tagsaaa</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/catbbb//" class="article-tag-list-link color2">catbbb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -775,6 +870,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">tagsaaa</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
