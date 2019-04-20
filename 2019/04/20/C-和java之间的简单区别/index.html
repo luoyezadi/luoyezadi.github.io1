@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java集合详解和之间关系 | 落叶砸地</title>
+  <title>C#和java之间的简单区别 | 落叶砸地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.java常用集合类家族史:（具体请参照APIhttp://tool.oschina.net/apidocs/apidoc?api=jdk-zh）常用集合如太极一般，一分为二，一者曰Collection，再者曰Map。话说，太极生两仪，两仪生四象。。。（布拉布拉。。。） Collection接口其中Collection接口一般用到的就是List和Set两种（下面其他的也会涉及到不过以这两种为主）">
-<meta name="keywords" content="java,集合">
+  <meta name="description" content="真的很像">
+<meta name="keywords" content="C#,java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java集合详解和之间关系">
-<meta property="og:url" content="http://yoursite.com/2019/04/20/java集合详解和之间关系/index.html">
+<meta property="og:title" content="C#和java之间的简单区别">
+<meta property="og:url" content="http://yoursite.com/2019/04/20/C-和java之间的简单区别/index.html">
 <meta property="og:site_name" content="落叶砸地">
-<meta property="og:description" content="1.java常用集合类家族史:（具体请参照APIhttp://tool.oschina.net/apidocs/apidoc?api=jdk-zh）常用集合如太极一般，一分为二，一者曰Collection，再者曰Map。话说，太极生两仪，两仪生四象。。。（布拉布拉。。。） Collection接口其中Collection接口一般用到的就是List和Set两种（下面其他的也会涉及到不过以这两种为主）">
+<meta property="og:description" content="真的很像">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/04/20/java集合详解和之间关系/集合框架体系1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/04/20/java集合详解和之间关系/集合框架体系3.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/20/java集合详解和之间关系/集合框架体系2.jpg">
-<meta property="og:updated_time" content="2019-04-20T18:50:59.481Z">
+<meta property="og:updated_time" content="2019-04-20T18:52:13.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java集合详解和之间关系">
-<meta name="twitter:description" content="1.java常用集合类家族史:（具体请参照APIhttp://tool.oschina.net/apidocs/apidoc?api=jdk-zh）常用集合如太极一般，一分为二，一者曰Collection，再者曰Map。话说，太极生两仪，两仪生四象。。。（布拉布拉。。。） Collection接口其中Collection接口一般用到的就是List和Set两种（下面其他的也会涉及到不过以这两种为主）">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/20/java集合详解和之间关系/集合框架体系1.jpg">
+<meta name="twitter:title" content="C#和java之间的简单区别">
+<meta name="twitter:description" content="真的很像">
   
     <link rel="alternative" href="/atom.xml" title="落叶砸地" type="application/atom+xml">
   
@@ -169,63 +165,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java集合详解和之间关系" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C-和java之间的简单区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java集合详解和之间关系
+      C#和java之间的简单区别
     </h1>
   
 
         
-        <a href="/2019/04/20/java集合详解和之间关系/" class="archive-article-date">
-  	<time datetime="2019-04-20T03:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-20</time>
+        <a href="/2019/04/20/C-和java之间的简单区别/" class="archive-article-date">
+  	<time datetime="2019-04-20T18:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-java常用集合类家族史"><a href="#1-java常用集合类家族史" class="headerlink" title="1.java常用集合类家族史:"></a>1.java常用集合类家族史:</h1><p>（具体请参照API<a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank" rel="noopener">http://tool.oschina.net/apidocs/apidoc?api=jdk-zh</a>）<br>常用集合如太极一般，一分为二，一者曰Collection，再者曰Map。<br>话说，太极生两仪，两仪生四象。。。（布拉布拉。。。）</p>
-<h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><p>其中Collection接口一般用到的就是List和Set两种（下面其他的也会涉及到不过以这两种为主）：<br>以上二者，List再生ArrayList/Vector/LinkedList，Set再生TreeSet/HashSet。<br>Collection–List–ArrayList<br>      |    |–Vecter<br>      |    |–LinkedList<br>      |–Set–HashSet<br>         |–TreeSet<br>（这几个用的多，但是辈分不一样，详看下图）<br><a id="more"></a></p>
-<h2 id="Map接口（图）"><a href="#Map接口（图）" class="headerlink" title="Map接口（图）"></a>Map接口（图）</h2><p>Map接口最多的就是HashMap，其他的就是看看，平时一般用不到，除非很特殊的地方<br><img src="/2019/04/20/java集合详解和之间关系/集合框架体系1.jpg" alt></p>
-<h1 id="2-各自优点"><a href="#2-各自优点" class="headerlink" title="2.各自优点"></a>2.各自优点</h1><p><img src="/2019/04/20/java集合详解和之间关系/集合框架体系3.png" alt><br><img src="/2019/04/20/java集合详解和之间关系/集合框架体系2.jpg" alt></p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="1-Collection-接口"><a href="#1-Collection-接口" class="headerlink" title="1.Collection 接口"></a>1.Collection 接口</h3><p>Collection 是最基本的集合接口，一个 Collection 代表一组 Object，即 Collection 的元素, Java不提供直接继承自Collection的类，只提供继承于的子接口(如List和set)。<br>Collection 接口存储一组不唯一，无序的对象。</p>
-<h3 id="2-List-接口"><a href="#2-List-接口" class="headerlink" title="2.List 接口"></a>2.List 接口</h3><p>List接口是一个有序的 Collection，使用此接口能够精确的控制每个元素插入的位置，能够通过索引(元素在List中位置，类似于数组的下标)来访问List中的元素，第一个元素的索引为 0，而且允许有相同的元素。<br>List 接口存储一组不唯一，有序（插入顺序）的对象。</p>
-<h3 id="3-Set-接口"><a href="#3-Set-接口" class="headerlink" title="3.Set 接口"></a>3.Set 接口</h3><p>Set 具有与 Collection 完全一样的接口，只是行为上不同，Set 不保存重复的元素。<br>Set 接口存储一组唯一，无序的对象。</p>
-<h3 id="4-SortedSet"><a href="#4-SortedSet" class="headerlink" title="4.SortedSet"></a>4.SortedSet</h3><p>继承于Set保存有序的集合。</p>
-<h3 id="5-Map"><a href="#5-Map" class="headerlink" title="5.Map"></a>5.Map</h3><p>Map 接口存储一组键值对象，提供key（键）到value（值）的映射。</p>
-<h3 id="6-Map-Entry"><a href="#6-Map-Entry" class="headerlink" title="6.Map.Entry"></a>6.Map.Entry</h3><p>描述在一个Map中的一个元素（键/值对）。是一个Map的内部类。</p>
-<h3 id="7-SortedMap"><a href="#7-SortedMap" class="headerlink" title="7.SortedMap"></a>7.SortedMap</h3><p>继承于 Map，使 Key 保持在升序排列。</p>
-<p>ps：对有序的理解<br>List有序和Set无序说的是啥呢？<br>就是呀，List是进去啥顺序，出来也是啥顺序。Set呢也想保证跟List一样的顺序的话是不行的，Set会自动去重（Set内心：就是不一样！能拿我怎么样！）。<br>这就有小伙伴说了，SortedSet不是也是有序的呀，这不是跟List一样啊！这么说就不对了，此有序非彼有序，SortedSet有序是因为他会自动排序！就是说，有序的概念有很多种比如正序倒序都是有序。</p>
-<h2 id="实现类"><a href="#实现类" class="headerlink" title="实现类"></a>实现类</h2><p>（太多了，列多点，其实看其中几个常用的就行了）</p>
-<h3 id="1-AbstractCollection"><a href="#1-AbstractCollection" class="headerlink" title="1.AbstractCollection"></a>1.AbstractCollection</h3><p>实现了大部分的集合接口。</p>
-<h3 id="2-AbstractList"><a href="#2-AbstractList" class="headerlink" title="2.AbstractList"></a>2.AbstractList</h3><p>继承于AbstractCollection 并且实现了大部分List接口。</p>
-<h3 id="3-AbstractSequentialList"><a href="#3-AbstractSequentialList" class="headerlink" title="3.AbstractSequentialList"></a>3.AbstractSequentialList</h3><p>继承于 AbstractList ，提供了对数据元素的链式访问而不是随机访问。</p>
-<h3 id="4-LinkedList"><a href="#4-LinkedList" class="headerlink" title="4.LinkedList"></a>4.LinkedList</h3><p>该类实现了List接口，允许有null（空）元素。主要用于创建链表数据结构，该类没有同步方法，如果多个线程同时访问一个List，则必须自己实现访问同步，解决方法就是在创建List时候构造一个同步的List。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Listlist=Collections.synchronizedList(newLinkedList(...));</span><br></pre></td></tr></table></figure></p>
-<p>LinkedList 查找效率低。</p>
-<h3 id="5-ArrayList"><a href="#5-ArrayList" class="headerlink" title="5.ArrayList"></a>5.ArrayList</h3><p>该类也是实现了List的接口，实现了可变大小的数组，随机访问和遍历元素时，提供更好的性能。该类也是非同步的,在多线程的情况下不要使用。ArrayList 增长当前长度的50%，插入删除效率低。</p>
-<h3 id="6-AbstractSet"><a href="#6-AbstractSet" class="headerlink" title="6.AbstractSet"></a>6.AbstractSet</h3><p>继承于AbstractCollection 并且实现了大部分Set接口。</p>
-<h3 id="7-HashSet"><a href="#7-HashSet" class="headerlink" title="7.HashSet"></a>7.HashSet</h3><p>该类实现了Set接口，不允许出现重复元素，不保证集合中元素的顺序，允许包含值为null的元素，但最多只能一个。</p>
-<h3 id="8-LinkedHashSet"><a href="#8-LinkedHashSet" class="headerlink" title="8.LinkedHashSet"></a>8.LinkedHashSet</h3><p>具有可预知迭代顺序的 Set 接口的哈希表和链接列表实现。</p>
-<h3 id="9-TreeSet"><a href="#9-TreeSet" class="headerlink" title="9. TreeSet"></a>9. TreeSet</h3><p>该类实现了Set接口，可以实现排序等功能。</p>
-<h3 id="10-AbstractMap"><a href="#10-AbstractMap" class="headerlink" title="10.AbstractMap"></a>10.AbstractMap</h3><p>实现了大部分的Map接口。</p>
-<h3 id="11-HashMap"><a href="#11-HashMap" class="headerlink" title="11.HashMap"></a>11.HashMap</h3><p>HashMap 是一个散列表，它存储的内容是键值对(key-value)映射。<br>该类实现了Map接口，根据键的HashCode值存储数据，具有很快的访问速度，最多允许一条记录的键为null，不支持线程同步。</p>
-<h3 id="12-TreeMap"><a href="#12-TreeMap" class="headerlink" title="12.TreeMap"></a>12.TreeMap</h3><p>继承了AbstractMap，并且使用一颗树。</p>
-<h3 id="13-WeakHashMap"><a href="#13-WeakHashMap" class="headerlink" title="13.WeakHashMap"></a>13.WeakHashMap</h3><p>继承AbstractMap类，使用弱密钥的哈希表。</p>
-<h3 id="14-LinkedHashMap"><a href="#14-LinkedHashMap" class="headerlink" title="14.LinkedHashMap"></a>14.LinkedHashMap</h3><p>继承于HashMap，使用元素的自然顺序对元素进行排序.</p>
-<h3 id="15-IdentityHashMap"><a href="#15-IdentityHashMap" class="headerlink" title="15.IdentityHashMap"></a>15.IdentityHashMap</h3><p>继承AbstractMap类，比较文档时使用引用相等。</p>
-<h3 id="java-util包中定义的类"><a href="#java-util包中定义的类" class="headerlink" title="java.util包中定义的类"></a>java.util包中定义的类</h3><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><p>该类和ArrayList非常相似，但是该类是同步的，可以用在多线程的情况，该类允许设置默认的增长长度，默认扩容方式为原来的2倍。</p>
-<h4 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h4><p>栈是Vector的一个子类，它实现了一个标准的后进先出的栈。</p>
-<h4 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h4><p>Dictionary 类是一个抽象类，用来存储键/值对，作用和Map类相似。</p>
-<h4 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h4><p>Hashtable 是 Dictionary(字典) 类的子类，位于 java.util 包中。</p>
-<h4 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h4><p>Properties 继承于 Hashtable，表示一个持久的属性集，属性列表中每个键及其对应值都是一个字符串。</p>
-<h4 id="BitSet"><a href="#BitSet" class="headerlink" title="BitSet"></a>BitSet</h4><p>一个Bitset类创建一种特殊类型的数组来保存位值。BitSet中数组大小会随需要增加。</p>
-<h1 id="针对几个常用实现类进行详细分析"><a href="#针对几个常用实现类进行详细分析" class="headerlink" title="针对几个常用实现类进行详细分析"></a>针对几个常用实现类进行详细分析</h1><p>1.List/ArrayList/LinkedList/vector<br>2.Set/HashSet/TreeSet<br>3.HashMap/TreeMap/HashTable</p>
-
+        <h1 id="真的很像"><a href="#真的很像" class="headerlink" title="真的很像"></a>真的很像</h1>
       
 
       
@@ -259,11 +219,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">集合</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -319,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://yoursite.com/2019/04/20/java集合详解和之间关系/" alt="微信分享二维码">
+      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://yoursite.com/2019/04/20/C-和java之间的简单区别/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -334,18 +294,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/20/好玩的开源项目和工具/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          好玩的开源项目和工具
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/17/树莓派到手配置/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">树莓派到手配置</div>
+    <a href="/2019/04/20/好玩的开源项目和工具/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">好玩的开源项目和工具</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-java常用集合类家族史"><span class="toc-number">1.</span> <span class="toc-text">1.java常用集合类家族史:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Collection接口"><span class="toc-number">1.1.</span> <span class="toc-text">Collection接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map接口（图）"><span class="toc-number">1.2.</span> <span class="toc-text">Map接口（图）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-各自优点"><span class="toc-number">2.</span> <span class="toc-text">2.各自优点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-number">2.1.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Collection-接口"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.Collection 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-List-接口"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.List 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Set-接口"><span class="toc-number">2.1.3.</span> <span class="toc-text">3.Set 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SortedSet"><span class="toc-number">2.1.4.</span> <span class="toc-text">4.SortedSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Map"><span class="toc-number">2.1.5.</span> <span class="toc-text">5.Map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Map-Entry"><span class="toc-number">2.1.6.</span> <span class="toc-text">6.Map.Entry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-SortedMap"><span class="toc-number">2.1.7.</span> <span class="toc-text">7.SortedMap</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现类"><span class="toc-number">2.2.</span> <span class="toc-text">实现类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-AbstractCollection"><span class="toc-number">2.2.1.</span> <span class="toc-text">1.AbstractCollection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AbstractList"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.AbstractList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-AbstractSequentialList"><span class="toc-number">2.2.3.</span> <span class="toc-text">3.AbstractSequentialList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-LinkedList"><span class="toc-number">2.2.4.</span> <span class="toc-text">4.LinkedList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-ArrayList"><span class="toc-number">2.2.5.</span> <span class="toc-text">5.ArrayList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-AbstractSet"><span class="toc-number">2.2.6.</span> <span class="toc-text">6.AbstractSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-HashSet"><span class="toc-number">2.2.7.</span> <span class="toc-text">7.HashSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-LinkedHashSet"><span class="toc-number">2.2.8.</span> <span class="toc-text">8.LinkedHashSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-TreeSet"><span class="toc-number">2.2.9.</span> <span class="toc-text">9. TreeSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-AbstractMap"><span class="toc-number">2.2.10.</span> <span class="toc-text">10.AbstractMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-HashMap"><span class="toc-number">2.2.11.</span> <span class="toc-text">11.HashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-TreeMap"><span class="toc-number">2.2.12.</span> <span class="toc-text">12.TreeMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-WeakHashMap"><span class="toc-number">2.2.13.</span> <span class="toc-text">13.WeakHashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-LinkedHashMap"><span class="toc-number">2.2.14.</span> <span class="toc-text">14.LinkedHashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-IdentityHashMap"><span class="toc-number">2.2.15.</span> <span class="toc-text">15.IdentityHashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-util包中定义的类"><span class="toc-number">2.2.16.</span> <span class="toc-text">java.util包中定义的类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vector"><span class="toc-number">2.2.16.1.</span> <span class="toc-text">Vector</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Stack"><span class="toc-number">2.2.16.2.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dictionary"><span class="toc-number">2.2.16.3.</span> <span class="toc-text">Dictionary</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hashtable"><span class="toc-number">2.2.16.4.</span> <span class="toc-text">Hashtable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Properties"><span class="toc-number">2.2.16.5.</span> <span class="toc-text">Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BitSet"><span class="toc-number">2.2.16.6.</span> <span class="toc-text">BitSet</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#针对几个常用实现类进行详细分析"><span class="toc-number">3.</span> <span class="toc-text">针对几个常用实现类进行详细分析</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#真的很像"><span class="toc-number">1.</span> <span class="toc-text">真的很像</span></a></li></ol>
                     </div>
                 </span>
             </div>
