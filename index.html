@@ -81,7 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/luoyezadi" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -126,7 +126,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/luoyezadi" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -161,6 +161,85 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-oracle导入dmp文件-替换现有表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/25/oracle导入dmp文件-替换现有表/">oracle导入dmp文件 替换现有表</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/25/oracle导入dmp文件-替换现有表/" class="archive-article-date">
+  	<time datetime="2019-04-25T00:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="当使用IMPDP完成数据库导入时，如遇到表已存在时，Oracle提供给我们如下四种处理方式："><a href="#当使用IMPDP完成数据库导入时，如遇到表已存在时，Oracle提供给我们如下四种处理方式：" class="headerlink" title="当使用IMPDP完成数据库导入时，如遇到表已存在时，Oracle提供给我们如下四种处理方式："></a>当使用IMPDP完成数据库导入时，如遇到表已存在时，Oracle提供给我们如下四种处理方式：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">a.忽略（SKIP，默认行为）；</span><br><span class="line">b.在原有数据基础上继续增加（APPEND）；</span><br><span class="line">c.先DROP表，然后创建表，最后完成数据插入（REPLACE）；</span><br><span class="line">d.先TRUNCATE，再完成数据插入（TRUNCATE）。</span><br><span class="line"></span><br><span class="line">先用EXPDP生成一份dump文件</span><br><span class="line">sec@secDB /expdp$ expdp sec/sec directory=expdp_dir dumpfile=`date +&quot;%Y%m%d%H%M%S&quot;`_sec.dmp logfile=`date +&quot;%Y%m%d%H%M%S&quot;`_sec.log</span><br><span class="line"></span><br><span class="line">分别使用四中方式真实的感知一下具体效果</span><br><span class="line">用到的IMPDP语句统一汇总在这里，方便参考。</span><br><span class="line">SKIP：</span><br><span class="line">impdp system/sys directory=expdp_dir dumpfile=20100401102917_sec.dmp logfile=20100401102917_sec_impdp.log TABLE_EXISTS_ACTION=SKIP</span><br><span class="line"></span><br><span class="line">APPEND：</span><br><span class="line">impdp system/sys directory=expdp_dir dumpfile=20100401102917_sec.dmp logfile=20100401102917_sec_impdp.log TABLE_EXISTS_ACTION=APPEND</span><br><span class="line"></span><br><span class="line">REPLACE：</span><br><span class="line">impdp system/sys directory=expdp_dir dumpfile=20100401102917_sec.dmp logfile=20100401102917_sec_impdp.log TABLE_EXISTS_ACTION=REPLACE</span><br><span class="line"></span><br><span class="line">TRUNCATE：</span><br><span class="line">impdp system/sys directory=expdp_dir dumpfile=20100401102917_sec.dmp logfile=20100401102917_sec_impdp.log TABLE_EXISTS_ACTION=TRUNCATE</span><br></pre></td></tr></table></figure>
+<p> impdp user/password@pdborcl FROMUSER=ICM_DEV TOUSER=user directory=TEST dumpfile=XXXXXXXXXXXXXXXX.dmp logfile=X.log table_exists_action=truncate</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">oracle</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">dmp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/25/oracle导入dmp文件-替换现有表/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-WebSSH2安装教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -845,80 +924,6 @@
 
 
   
-    <article id="post-JVM加载概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/20/JVM加载概述/">JVM加载概述</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/20/JVM加载概述/" class="archive-article-date">
-  	<time datetime="2019-04-20T11:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>类加载过程<br>先加载啥，后加载啥</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/20/JVM加载概述/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1053,6 +1058,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">WebSSH2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dmp</a>
               </li>
              
               <li class="article-tag-list-item">
