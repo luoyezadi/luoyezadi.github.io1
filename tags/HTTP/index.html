@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>树莓派到手配置 | 落叶砸地</title>
+  <title>Tag: HTTP | 落叶砸地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.WiFi 网络配置添加文件/boot/wpa_supplicant.conf123456789101112131415161718country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1 network=&amp;#123;ssid=&amp;quot;WiFi-A&amp;quot;psk=&amp;quot;12345">
-<meta name="keywords" content="树莓派">
-<meta property="og:type" content="article">
-<meta property="og:title" content="树莓派到手配置">
-<meta property="og:url" content="http://yoursite.com/2019/04/17/树莓派到手配置/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="落叶砸地">
+<meta property="og:url" content="http://yoursite.com/tags/HTTP/index.html">
 <meta property="og:site_name" content="落叶砸地">
-<meta property="og:description" content="1.WiFi 网络配置添加文件/boot/wpa_supplicant.conf123456789101112131415161718country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1 network=&amp;#123;ssid=&amp;quot;WiFi-A&amp;quot;psk=&amp;quot;12345">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-22T17:55:01.158Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="树莓派到手配置">
-<meta name="twitter:description" content="1.WiFi 网络配置添加文件/boot/wpa_supplicant.conf123456789101112131415161718country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1 network=&amp;#123;ssid=&amp;quot;WiFi-A&amp;quot;psk=&amp;quot;12345">
+<meta name="twitter:title" content="落叶砸地">
   
     <link rel="alternative" href="/atom.xml" title="落叶砸地" type="application/atom+xml">
   
@@ -165,218 +160,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-树莓派到手配置" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      树莓派到手配置
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/29/我是一个HTTP请求/" class="archive-article-date">
+  	<time datetime="2019-05-29T03:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/29/我是一个HTTP请求/">我是一个HTTP请求</a>
     </h1>
   
 
-        
-        <a href="/2019/04/17/树莓派到手配置/" class="archive-article-date">
-  	<time datetime="2019-04-17T06:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-WiFi-网络配置"><a href="#1-WiFi-网络配置" class="headerlink" title="1.WiFi 网络配置"></a>1.WiFi 网络配置</h1><p>添加文件/boot/wpa_supplicant.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;WiFi-A&quot;</span><br><span class="line">psk=&quot;12345678&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">priority=1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;WiFi-B&quot;</span><br><span class="line">psk=&quot;12345678&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">priority=2</span><br><span class="line">scan_ssid=1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>说明以及不同安全性的 WiFi 配置示例：</p>
-<p>#ssid:网络的ssid</p>
-<p>#psk:密码</p>
-<p>#priority:连接优先级，数字越大优先级越高（不可以是负数）</p>
-<p>#scan_ssid:连接隐藏WiFi时需要指定该值为1<br><a id="more"></a></p>
-<h3 id="记得设置mac和ip绑定"><a href="#记得设置mac和ip绑定" class="headerlink" title="记得设置mac和ip绑定"></a>记得设置mac和ip绑定</h3><p>如果你的 WiFi 没有密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=NONE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你的 WiFi 使用WEP加密<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=NONE</span><br><span class="line">wep_key0=&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你的 WiFi 使用WPA/WPA2加密<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;你的无线网络名称（ssid）&quot;</span><br><span class="line">key_mgmt=WPA-PSK</span><br><span class="line">psk=&quot;你的wifi密码&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-开启-SSH-服务"><a href="#2-开启-SSH-服务" class="headerlink" title="2.开启 SSH 服务"></a>2.开启 SSH 服务</h1><h2 id="boot-分区新建一个文件，空白的即可，文件命名为-ssh"><a href="#boot-分区新建一个文件，空白的即可，文件命名为-ssh" class="headerlink" title="boot 分区新建一个文件，空白的即可，文件命名为 ssh"></a>boot 分区新建一个文件，空白的即可，文件命名为 ssh</h2><p>转载<a href="http://shumeipai.nxez.com/2017/09/13/raspberry-pi-network-configuration-before-boot.html" target="_blank" rel="noopener">http://shumeipai.nxez.com/2017/09/13/raspberry-pi-network-configuration-before-boot.html</a></p>
-<h1 id="3-更改源和改中文"><a href="#3-更改源和改中文" class="headerlink" title="3.更改源和改中文"></a>3.更改源和改中文</h1><h2 id="3-1树莓派的镜像"><a href="#3-1树莓派的镜像" class="headerlink" title="3.1树莓派的镜像"></a>3.1树莓派的镜像</h2><h1 id="！！！python-ln到python3【sudo-apt-get-upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！"><a href="#！！！python-ln到python3【sudo-apt-get-upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！" class="headerlink" title="！！！python ln到python3【sudo apt-get upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！"></a>！！！python ln到python3【sudo apt-get upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！</h1><p>树莓派的镜像文件在/etc/apt/sources.list中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure></p>
-<p>(习惯适应nano)<br>用#注释掉原文件内容，用以下内容取代：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi</span><br></pre></td></tr></table></figure></p>
-<p>编辑镜像站后，请使用sudo apt-get update 命令，更新软件源列列表，同时检查你的编辑是否正确</p>
-<p>编辑 /etc/apt/sources.list.d/raspi.list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/apt/sources.list.d/raspi.list</span><br></pre></td></tr></table></figure></p>
-<p>用#注释掉原文内容，用以下内容取代<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirror.tuna.tsinghua.edu.cn/raspberrypi/ stretch main ui</span><br><span class="line">deb-src http://mirror.tuna.tsinghua.edu.cn/raspberrypi/ stretch main ui</span><br></pre></td></tr></table></figure></p>
-<h2 id="此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方"><a href="#此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方" class="headerlink" title="此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方"></a>此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方</h2><p>更新软件索引清单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p>
-<p>比较索引清单更新依赖关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure></p>
-<p>其他一些软件源有：<br>中国科技大学 <a href="http://mirrors.ustc.edu.cn/raspbian/raspbian/" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/raspbian/raspbian/</a><br>浙江大学  <a href="http://mirrors.zju.edu.cn/raspbian/raspbian/" target="_blank" rel="noopener">http://mirrors.zju.edu.cn/raspbian/raspbian/</a></p>
-<h2 id="3-2中文设置"><a href="#3-2中文设置" class="headerlink" title="3.2中文设置"></a>3.2中文设置</h2><p>安装中文字体<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure></p>
-<h3 id="操作提示：按空格键在前面打钩或者去掉勾（星号-勾），PageUp-PageDown-快速翻页，Tab键跳到OK按钮上"><a href="#操作提示：按空格键在前面打钩或者去掉勾（星号-勾），PageUp-PageDown-快速翻页，Tab键跳到OK按钮上" class="headerlink" title="操作提示：按空格键在前面打钩或者去掉勾（星号=勾），PageUp PageDown 快速翻页，Tab键跳到OK按钮上"></a>操作提示：按空格键在前面打钩或者去掉勾（星号=勾），PageUp PageDown 快速翻页，Tab键跳到OK按钮上</h3><p>去掉en_GB.UTF-8 UTF-8，勾上：“en_US.UTF-8 UTF-8”、“zh_CN.UTF-8 UTF-8”、“zh_CN.GBK GBK”，下一屏幕默认语言选zh_CN.UTF-8。</p>
-<p>安装中文输入法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -y install scim-pinyin</span><br></pre></td></tr></table></figure></p>
-<p>重启生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></p>
-<p>转载<a href="https://blog.csdn.net/weixin_39529413/article/details/79187502" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39529413/article/details/79187502</a></p>
-<h2 id="这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能"><a href="#这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能" class="headerlink" title="这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能"></a>这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能</h2><h3 id="1-源更新导致的"><a href="#1-源更新导致的" class="headerlink" title="1.源更新导致的"></a>1.源更新导致的</h3><h3 id="2-是内存卡格式这次用的是FAT32的"><a href="#2-是内存卡格式这次用的是FAT32的" class="headerlink" title="2.是内存卡格式这次用的是FAT32的"></a>2.是内存卡格式这次用的是FAT32的</h3><h3 id="不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）"><a href="#不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）" class="headerlink" title="不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）"></a>不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）</h3><h1 id="4-花生壳"><a href="#4-花生壳" class="headerlink" title="4.花生壳"></a>4.花生壳</h1><p>参照官网【花生壳 3.0 for 树莓派 安装使用攻略】<a href="http://service.oray.com/question/2680.html" target="_blank" rel="noopener">http://service.oray.com/question/2680.html</a></p>
-<h1 id="5-root用户WinSCP登陆"><a href="#5-root用户WinSCP登陆" class="headerlink" title="5.root用户WinSCP登陆"></a>5.root用户WinSCP登陆</h1><p>1：使用 sudo passwd root 设置好密码（已设置可忽略这步）。<br>2：然后在/etc/ssh/sshd_config中找到PermitRootLogin 这一行将后面的参数改为yes 保存退出。<br>3：重启service ssh restart 。<br>4：重新打开winscp 重新编辑登录信息，使用root用户登录就可以直接拖拽文件。</p>
-<h1 id="6-树莓派远程桌面"><a href="#6-树莓派远程桌面" class="headerlink" title="6.树莓派远程桌面"></a>6.树莓派远程桌面</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br></pre></td></tr></table></figure>
-<p>此处详细<a href="https://blog.csdn.net/wuli_dear_wang/article/details/84446168" target="_blank" rel="noopener">https://blog.csdn.net/wuli_dear_wang/article/details/84446168</a><br>VNC好用推荐<a href="https://www.cnblogs.com/xiaowuyi/p/4012069.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaowuyi/p/4012069.html</a><br>VNC开机自启<a href="https://www.cnblogs.com/leviatan/p/9428188.html" target="_blank" rel="noopener">https://www.cnblogs.com/leviatan/p/9428188.html</a><br><a href="https://jingyan.baidu.com/article/48b558e3efed767f39c09a5b.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/48b558e3efed767f39c09a5b.html</a></p>
-<h1 id="7-树莓派-可以适应显示器的boot-config-txt配置"><a href="#7-树莓派-可以适应显示器的boot-config-txt配置" class="headerlink" title="7.树莓派-可以适应显示器的boot/config.txt配置"></a>7.树莓派-可以适应显示器的boot/config.txt配置</h1><p>[<a href="https://blog.csdn.net/a497785609/article/details/77726382]{https://blog.csdn.net/a497785609/article/details/77726382}" target="_blank" rel="noopener">https://blog.csdn.net/a497785609/article/details/77726382]{https://blog.csdn.net/a497785609/article/details/77726382}</a></p>
-<h1 id="8-树莓派复制系统到新内存卡教程（母鸡生小鸡）"><a href="#8-树莓派复制系统到新内存卡教程（母鸡生小鸡）" class="headerlink" title="8.树莓派复制系统到新内存卡教程（母鸡生小鸡）"></a>8.树莓派复制系统到新内存卡教程（母鸡生小鸡）</h1><p><a href="https://www.jianshu.com/p/cfa99c3e006e" target="_blank" rel="noopener">https://www.jianshu.com/p/cfa99c3e006e</a><br><a href="https://blog.csdn.net/qq_32863631/article/details/76060508" target="_blank" rel="noopener">https://blog.csdn.net/qq_32863631/article/details/76060508</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://yoursite.com/2019/04/17/树莓派到手配置/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/04/20/java集合详解和之间关系/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java集合详解和之间关系
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/04/14/Hexo添加音乐-视频/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo添加音乐/视频</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-WiFi-网络配置"><span class="toc-number">1.</span> <span class="toc-text">1.WiFi 网络配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记得设置mac和ip绑定"><span class="toc-number">1.0.1.</span> <span class="toc-text">记得设置mac和ip绑定</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#2-开启-SSH-服务"><span class="toc-number">2.</span> <span class="toc-text">2.开启 SSH 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#boot-分区新建一个文件，空白的即可，文件命名为-ssh"><span class="toc-number">2.1.</span> <span class="toc-text">boot 分区新建一个文件，空白的即可，文件命名为 ssh</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-更改源和改中文"><span class="toc-number">3.</span> <span class="toc-text">3.更改源和改中文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1树莓派的镜像"><span class="toc-number">3.1.</span> <span class="toc-text">3.1树莓派的镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#！！！python-ln到python3【sudo-apt-get-upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！"><span class="toc-number">4.</span> <span class="toc-text">！！！python ln到python3【sudo apt-get upgrade】会出错，记得改回来！！！！这种基础命令最好别动呀！！！！！</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方"><span class="toc-number">4.1.</span> <span class="toc-text">此处时间很长，建议先开一个远程桌面，或者用电脑ssh，手机的话很容易断，中间有很多需要输入y的地方</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2中文设置"><span class="toc-number">4.2.</span> <span class="toc-text">3.2中文设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作提示：按空格键在前面打钩或者去掉勾（星号-勾），PageUp-PageDown-快速翻页，Tab键跳到OK按钮上"><span class="toc-number">4.2.1.</span> <span class="toc-text">操作提示：按空格键在前面打钩或者去掉勾（星号=勾），PageUp PageDown 快速翻页，Tab键跳到OK按钮上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能"><span class="toc-number">4.3.</span> <span class="toc-text">这一步操作完事之后发现树莓派无法连接只能用网线，系统卡写入保护（这样的话重装系统费劲了，记得先格式化为NTFS），分析导致原因为两种可能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-源更新导致的"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.源更新导致的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-是内存卡格式这次用的是FAT32的"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.是内存卡格式这次用的是FAT32的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）"><span class="toc-number">4.3.3.</span> <span class="toc-text">不管怎样现在只能用网线去配置wifi连接了（因为系统可写入保护，显示器都连接不上）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-花生壳"><span class="toc-number">5.</span> <span class="toc-text">4.花生壳</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-root用户WinSCP登陆"><span class="toc-number">6.</span> <span class="toc-text">5.root用户WinSCP登陆</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-树莓派远程桌面"><span class="toc-number">7.</span> <span class="toc-text">6.树莓派远程桌面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-树莓派-可以适应显示器的boot-config-txt配置"><span class="toc-number">8.</span> <span class="toc-text">7.树莓派-可以适应显示器的boot/config.txt配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-树莓派复制系统到新内存卡教程（母鸡生小鸡）"><span class="toc-number">9.</span> <span class="toc-text">8.树莓派复制系统到新内存卡教程（母鸡生小鸡）</span></a></li>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -399,9 +236,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
